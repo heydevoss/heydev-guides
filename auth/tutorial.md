@@ -6,11 +6,11 @@ usuário e senha (caso o usuário não esteja logado na sua conta do github) com
 `// imagem`  
 Se esse é o primeiro acesso, será feito um pedido de autorização para o acesso de algumas informações:  
 `//imagem`  
-Uma vez que o usuário aceitou as permissões, conseguimos gerar o token, e passá-lo para o front através de uma url de redirecionamento definida no arquivo `.env`, caso as permissões não sejam aceitas, ele será redirecionado para url de erro, também configurada no `.env`, como veremos a seguir.
+Uma vez que o usuário aceitou as permissões, o back conseguirá gerar o token, e passá-lo para o front através de uma url de redirecionamento definida no arquivo `.env`, caso as permissões não sejam aceitas, ele será redirecionado para url de erro, também configurada no `.env`, como veremos a seguir.
 
 Certo, tudo muito lindo, mas como fazemos isso funcionar por debaixo dos panos?
 
-Nós, aqui do panelinha de es, somos pessoas que gostam de abstrair ideias a partir de figuras, sendo assim, para que você entenda como se dá a comunicação entre o cliente o servidor, observe a figura abaixo:
+Nós, aqui do panelinha de es, somos devs que gostam de abstrair ideias a partir de figuras, sendo assim, para que você entenda como se dá a comunicação entre o cliente o servidor, observe a figura abaixo:
 
 
 ![](https://i.imgur.com/Q0uQ9K2.png)
