@@ -6,7 +6,7 @@ usuário e senha (caso o usuário não esteja logado na sua conta do github) com
 `// imagem`  
 Se esse é o primeiro acesso, será feito um pedido de autorização para o acesso de algumas informações:  
 `//imagem`  
-Uma vez que o usuário aceitou as permissões, conseguimos gerar o token, e passá-lo para o front através de uma url de redirecionamento definida no arquivo `.env`, caso as permissões não sejam aceitas, ele será redirecionado para url de erro, também configurada no `env`, como veremos a seguir.
+Uma vez que o usuário aceitou as permissões, conseguimos gerar o token, e passá-lo para o front através de uma url de redirecionamento definida no arquivo `.env`, caso as permissões não sejam aceitas, ele será redirecionado para url de erro, também configurada no `.env`, como veremos a seguir.
 
 Certo, tudo muito lindo, mas como fazemos isso funcionar por debaixo dos panos?
 
@@ -15,9 +15,9 @@ Nós, aqui do panelinha de es, somos pessoas que gostam de abstrair ideias a par
 
 ![](https://i.imgur.com/Q0uQ9K2.png)
 
-A partir da figura acima, vemos que o cliente, apenas requisita o login e o back abstrai toda a lógica de negócio da autenticação, redirecionando ao final, para a url de sucesso ou erro configurada.
+A partir da figura acima, vemos que o cliente, apenas requisita o login e o back abstrai toda a lógica de negócio da autenticação, e ao final de todos os processos, redirecionará, para a url de sucesso ou erro configurada.
 
-Okay, agora sim, vamos pular para o código.
+Okay, agora que definimos isso, vamos pular para o código.
 
 
 ## Criando uma aplicação GITHUB OAUTH
