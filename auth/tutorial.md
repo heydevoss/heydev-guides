@@ -1,10 +1,10 @@
 ## *Flow* de autenticação no github
     
 Quando um usuário deseja se logar na nossa aplicação, ele precisa clicar no botão de Login, ao clicar nele, 
-o usuário será direcionado a um form provido pelo github, em que é necessário colocar seu nome de 
+o mesmo será direcionado a um form provido pelo github, em que é necessário colocar seu nome de 
 usuário e senha (caso o usuário não esteja logado na sua conta do github) como mostra a imagem abaixo:  
 `// imagem`  
-Se esse  é o primeiro acesso do usuário, ele terá que autorizar o acesso a algumas informações:  
+Se esse é o primeiro acesso, será feito um pedido de autorização para o acesso de algumas informações:  
 `//imagem`  
 Uma vez que o usuário aceitou as permissões, conseguimos gerar o token, e passá-lo para o front através de uma url de redirecionamento definida no arquivo `.env`, caso as permissões não sejam aceitas, ele será redirecionado para url de erro, também configurada no `env`, como veremos a seguir.
 
