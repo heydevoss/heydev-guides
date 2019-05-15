@@ -1,4 +1,4 @@
-## *Flow* de autenticação no github
+## *Fluxo* de autenticação no github
     
 Quando um usuário deseja se logar na nossa aplicação, ele precisa clicar no botão de Login, ao clicar nele, 
 o mesmo será direcionado a um form provido pelo github, em que é necessário colocar seu nome de 
@@ -20,7 +20,7 @@ A partir da figura acima, vemos que o cliente, apenas requisita o login e o back
 Okay, agora que definimos isso, vamos pular para o código.
 
 
-## Criando uma aplicação GITHUB OAUTH
+## Criando uma aplicação Github Oauth
 Para criar a aplicação do Github OAuth, acesse o github, e siga o seguintes passos:
 
 1. Navegue até a parte de settings.
@@ -31,7 +31,7 @@ Para criar a aplicação do Github OAuth, acesse o github, e siga o seguintes pa
 ## Configurando o servidor
 Após termos criado o github oauth app, precisamos configurar nosso servidor, para testar o que definimos anteriormente.
 
-Para isso, baixamos [o projeto do servidor](https://github.com/panelinhadees/server.git), e para que ele funcione corretamente, é necessário criar um  arquivo chamado `.env`, que nos ajuda a definir as configurações necessárias para execução da aplicação, veja o exemplo abaixo.
+Para isso, baixamos [o projeto do servidor](https://github.com/panelinhadees/server.git), e para que ele funcione corretamente, é necessário criar um  arquivo chamado `.env`, que nos ajuda a definir as configurações necessárias para execução da aplicação, veja o exemplo abaixo e crie o arquivo seguindo esse mesmo template.
 
 Podemos dividir as configurações em quatro tipos:
 - **Github OAuth**: Configurações relacionadas a configuração da app auth, que criamos no passo anterior.
@@ -63,7 +63,16 @@ GITHUB_OAUTH_CALLBACK_URL=your-oauth-app-callback-url
 Agora, podemos instalar as dependências e levantar o nosso servidor.
 
 ## Instalando as dependências
-*COMING SOON*
+Para instalar as dependências, usamos o `npm`, e rodamos o seguinte comando:
+
+`npm install`
+
+E para subir o servidor, executamos esse:
+
+`npm start`
+
+*TODO: docker config*
+
 ## Linkando o server ao front
 *COMING SOON*
 ## Gerenciando o login
