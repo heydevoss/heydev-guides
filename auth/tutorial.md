@@ -29,9 +29,9 @@ Para criar a aplicação do Github OAuth, acesse o github, e siga o seguintes pa
 4. Preencha corretamente as informações necessárias.
 
 ## Configurando o servidor
-Após termos criado o github oauth app, configurar nosso servidor, para testar as configurações definidas anteriormente.
+Após termos criado o github oauth app, precisamos configurar nosso servidor, para testar o que definimos anteriormente.
 
-Feito isso, baixamos o nosso projeto do servidor, e para que ele funcione corretamente, é necessário criar um  arquivo chamado `.env`, ele nos ajuda a definir as configurações necessárias para execução da aplicação, veja o exemplo abaixo.
+Para isso, baixamos [o projeto do servidor](https://github.com/panelinhadees/server.git), e para que ele funcione corretamente, é necessário criar um  arquivo chamado `.env`, que nos ajuda a definir as configurações necessárias para execução da aplicação, veja o exemplo abaixo.
 
 Podemos dividir as configurações em quatro tipos:
 - **Github OAuth**: Configurações relacionadas a configuração da app auth, que criamos no passo anterior.
