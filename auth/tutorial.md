@@ -21,9 +21,47 @@ Okay, agora que definimos isso, vamos pular para o código.
 
 
 ## Criando uma aplicação GITHUB OAUTH
-*COMING SOON*
-## Criando um ENV
-*COMING SOON*
+Para criar a aplicação do Github OAuth, acesse o github, e siga o seguintes passos:
+
+1. Navegue até a parte de settings.
+2. Clique na seção de Developer Settings.
+3. Clique no botão para criar uma nova aplicação OAuth.
+4. Preencha corretamente as informações necessárias.
+
+## Configurando o servidor
+Após termos criado o github oauth app, configurar nosso servidor, para testar as configurações definidas anteriormente.
+
+Feito isso, baixamos o nosso projeto do servidor, e para que ele funcione corretamente, é necessário criar um  arquivo chamado `.env`, ele nos ajuda a definir as configurações necessárias para execução da aplicação, veja o exemplo abaixo.
+
+Podemos dividir as configurações em quatro tipos:
+- **Github OAuth**: Configurações relacionadas a configuração da app auth, que criamos no passo anterior.
+- **Server**: Configuração da porta, e da url de acesso ao servidor.
+- **Client**: Configuração da porta, e da url de acesso ao cliente(você entenderá a seguir porque isso é necessário).
+- **Rotas**: As rotas de redirecionamento para o cliente, em caso de erro ou sucesso.
+
+*.env*
+```.env
+# Required
+GITHUB_OAUTH_CLIENT_ID=your-oauth-app-client-id
+GITHUB_OAUTH_CLIENT_SECRET=your-oauth-app-client-secret
+GITHUB_OAUTH_CALLBACK_URL=your-oauth-app-callback-url
+
+# Optional - Uncomment if you want to change these values
+# SERVER_BASE_URL='http://localhost'
+# SERVER_PORT=5000
+
+# CLIENT_BASE_URL='http://localhost'
+# CLIENT_PORT=8080
+
+# The auth token will be sent to $CLIENT_BASE_URL:$CLIENT_PORT$CLIENT_AUTH_SUCCESS_PATH/:token
+# In case of error a message will be sent to $CLIENT_BASE_URL:$CLIENT_PORT$CLIENT_AUTH_ERROR_PATH
+
+# CLIENT_AUTH_SUCCESS_PATH='/auth'
+# CLIENT_AUTH_FAIL_PATH='/error'
+```
+
+Agora, podemos instalar as dependências e levantar o nosso servidor.
+
 ## Instalando as dependências
 *COMING SOON*
 ## Linkando o server ao front
