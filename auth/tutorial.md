@@ -42,9 +42,13 @@ Podemos dividir as configurações em quatro tipos:
 *.env*
 ```.env
 # Required
-GITHUB_OAUTH_CLIENT_ID=your-oauth-app-client-id
-GITHUB_OAUTH_CLIENT_SECRET=your-oauth-app-client-secret
-GITHUB_OAUTH_CALLBACK_URL=your-oauth-app-callback-url
+GITHUB_OAUTH_APP_CLIENT_ID=your-oauth-app-client-id
+GITHUB_OAUTH_APP_CLIENT_SECRET=your-oauth-app-client-secret
+GITHUB_OAUTH_APP_CALLBACK_URL=your-oauth-app-callback-url
+GITHUB_ORGANIZATION_LOGIN=your-github-organization-login
+
+# Tests Required
+GITHUB_TOKEN=your-github-token
 
 # Optional - Uncomment if you want to change these values
 # SERVER_BASE_URL='http://localhost'
